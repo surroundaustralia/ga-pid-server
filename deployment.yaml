@@ -1,0 +1,77 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ga-pid-server
+  name: ga-pid-server-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ga-pid-server
+  template:
+    metadata:
+      labels:
+        app: ga-pid-server
+    spec:
+      containers:
+        - image: 680471986828.dkr.ecr.ap-southeast-2.amazonaws.com/surround/ga-pid-server:latest
+          imagePullPolicy: Always
+          name: ga-pid-server
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: 250m
+              memory: 128Mi
+            requests:
+              cpu: 100m
+              memory: 32Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ga-pid-server-service
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: ga-pid-server
+  type: ClusterIP
+---
+apiVersion: cert-manager.io/v1alpha2
+kind: ClusterIssuer
+metadata:
+  name: ga-pid-server-issuer
+  namespace: cert-manager
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: jamie.feiss@surroundaustralia.com
+    privateKeySecretRef:
+      name: ga-pid-server-issuer
+    solvers:
+      - http01:
+          ingress:
+            class: nginx
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ga-pid-server-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: "ga-pid-server-issuer"
+spec:
+  tls:
+    - hosts:
+        - geopid.surroundaustralia.com
+      secretName: ga-pid-server-cert
+  rules:
+    - host: geopid.surroundaustralia.com
+      http:
+        paths:
+          - backend:
+              serviceName: ga-pid-server-service
+              servicePort: 80
