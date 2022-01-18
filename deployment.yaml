@@ -15,7 +15,7 @@ spec:
         app: ga-pid-server
     spec:
       containers:
-        - image: 680471986828.dkr.ecr.ap-southeast-2.amazonaws.com/surround/ga-pid-server:latest
+        - image: 680471986828.dkr.ecr.ap-southeast-2.amazonaws.com/ga/pid-server:latest
           imagePullPolicy: Always
           name: ga-pid-server
           ports:
