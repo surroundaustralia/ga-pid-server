@@ -26,7 +26,9 @@ jobs:
           docker build -t $ECR_REGISTRY/ga/pid-server:latest -f Dockerfile .
           docker push $ECR_REGISTRY/ga/pid-server:latest
       - name: Token replacement
-        run: sed -i -e "s/#{ECR_REGISTRY}#/${ECR_REGISTRY}/g" deployment.yaml
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+        run: sed -i -e "s/#{ECR_REGISTRY}#/$ECR_REGISTRY/g" deployment.yaml
       - name: Deploy kubernetes manifest
         uses: kodermax/kubectl-aws-eks@master
         env:
