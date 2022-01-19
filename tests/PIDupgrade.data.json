@@ -1,0 +1,661 @@
+{
+    "/feature/ga/borehole/10000 %{QUERY_STRING} ^_format=gml32": [
+        {
+            "label": "Demo Borehole 10000",
+            "from": "http://localhost:8080/feature/ga/borehole/10000?_format=gml32",
+            "to": "http://services.ga.gov.au/geoserver/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;&amp;typeName=gsmlp:BoreholeView&amp;outputFormat=gml32&amp;Filter=&lt;Filter&gt;&lt;PropertyIsEqualTo&gt;&lt;PropertyName&gt;gsmlp:identifier&lt;/PropertyName&gt;&lt;Literal&gt;http://pid.geoscience.gov.au/feature/ga/borehole/10000&lt;/Literal&gt;&lt;/PropertyIsEqualTo&gt;&lt;/Filter&gt",
+            "headers":{}
+        }
+    ],
+    "/feature/10000 %{QUERY_STRING} ^_format=gml32": [
+        {
+            "label": "Demo Borehole 10000 2",
+            "from": "http://localhost:8080/feature/10000?_format=gml32",
+            "to": "http://services.ga.gov.au/geoserver/ows?service=WFS&amp;version=1.1.0&amp;request=GetFeature&amp;&amp;typeName=gsmlp:BoreholeView&amp;Filter=&lt;Filter&gt;&lt;PropertyIsEqualTo&gt;&lt;PropertyName&gt;gsmlp:identifier&lt;/PropertyName&gt;&lt;Literal&gt;http://pid.geoscience.gov.au/feature/ga/borehole/10000&lt;/Literal&gt;&lt;/PropertyIsEqualTo&gt;&lt;/Filter&gt",
+            "headers":{}
+        }
+    ],
+    "/classifierscheme/ggic/2016.01/tenement-status":[
+        {
+            "label": "GGIC Tenement Status",
+            "from": "http://localhost:8080/classifierscheme/ggic/2016.01/tenement-status",
+            "to": "http://vocabs.ga.gov.au/ggic/sissvoc/tenement-status/resource?uri=http://resource.geoscience.gov.au/classifierscheme/ggic/2016.01/tenement-status",
+            "headers": {}
+        }
+    ],
+    "/classifierscheme/ggic/2016.01/tenementtype":[
+        {
+            "label": "GGIC Tenement Type",
+            "from": "http://localhost:8080/classifierscheme/ggic/2016.01/tenementtype",
+            "to": "http://vocabs.ga.gov.au/ggic/sissvoc/tenement-type/resource?uri=http://resource.geoscience.gov.au/classifierscheme/ggic/2016.01/tenementtype",
+            "headers": {}
+        }
+    ],
+    "/(dataset|service)/([0-9]{1,7})":[
+        {
+            "label": "GA Dataset/Service Instance - OLD",
+            "from": "http://localhost:8080/dataset/13457",
+            "to": "http://pid.geoscience.gov.au/id/dataset/ga/13457",
+            "headers": {}
+        }
+    ],
+    "/classifier/ggic/tenement-status/(.*)":[
+        {
+            "label": "GGIC voc Tenement Status",
+            "from": "http://localhost:8080/classifier/ggic/tenement-status/test",
+            "to": "http://vocabs.ga.gov.au/ggic/sissvoc/tenement-status/resource?uri=http://resource.geoscience.gov.au/classifier/ggic/tenement-status/test",
+            "headers": {}
+        }
+    ],
+	"/def/ont/ga/": [
+		{
+			"label": "Def ont GA Register",
+			"from": "http://localhost:8080/def/ont/ga/",
+			"to": "http://ldweb.ga.gov.au/def/ont/ga/index.html",
+			"headers": {}
+		}
+	],
+        "http://localhost:8080/def/ont/ga/link.owl":[
+        {
+            "label": "ont GA LINK",
+            "from": "http://localhost:8080/def/ont/ga/link.owl",
+            "to": "http://ldweb.ga.gov.au/def/ont/ga/link/link.ttl",
+            "headers": {}
+        }
+    ],
+        "/def/ont/ga/link %{QUERY_STRING} ^_format=text/turtle":[
+        {
+            "label": "/def/ont/ga/link %{QUERY_STRING} ^_format=text/turtle",
+            "from": "http://localhost:8080/def/ont/ga/link?_format=text/turtle",
+            "to": "http://ldweb.ga.gov.au/def/ont/ga/link/link.ttl",
+            "headers": {}
+        },
+        {
+            "label": "/def/ont/ga/link.ttl",
+            "from": "http://localhost:8080/def/ont/ga/link.ttl",
+            "to": "http://ldweb.ga.gov.au/def/ont/ga/link/link.ttl",
+            "headers": {}
+        },
+        {
+            "label": "/def/ont/ga/link.owl",
+            "from": "http://localhost:8080/def/ont/ga/link.owl",
+            "to": "http://ldweb.ga.gov.au/def/ont/ga/link/link.ttl",
+            "headers": {}
+        },
+        {
+            "label": "/def/ont/ga/link*",
+            "from": "http://localhost:8080/def/ont/ga/link.test",
+            "to": "http://ldweb.ga.gov.au/def/ont/ga/link/link.html",
+            "headers": {}
+        }
+    ],
+        "/ecat-ldapi/static/*":[
+        {
+            "label": "eCat LDAPI static URI",
+            "from": "http://localhost:8080/ecat-ldapi/static/test",
+            "to": "http://ldapi.ga.gov.au/ecat-ldapi/static/test",
+            "headers": {}
+        }
+    ],
+        "/def/ont/ga/igsn* Accept: text/turtle":[
+        {
+            "label": "/def/ont/ga/igsn Accept: text/turtle",
+            "from": "http://localhost:8080/def/ont/ga/igsn?_format=text/turtle",
+            "to": "http://ldweb.ga.gov.au/def/ont/ga/igsn/igsn.ttl",
+            "headers": {}
+        }
+    ],
+        "/def/ont/ga/igsn.ttl":[
+        {
+            "label": "igsn.ttl",
+            "from": "http://localhost:8080/def/ont/ga/igsn.ttl",
+            "to": "http://ldweb.ga.gov.au/def/ont/ga/igsn/igsn.ttl",
+            "headers": {}
+        }
+    ],
+        "/def/ont/ga/igsn.owl":[
+        {
+            "label": "igsn owl",
+            "from": "http://localhost:8080/def/ont/ga/igsn.owl",
+            "to": "http://ldweb.ga.gov.au/def/ont/ga/igsn/igsn.ttl",
+            "headers": {}
+        }
+    ],
+        "/def/ont/ga/igsn*":[
+        {
+            "label": "igsn default",
+            "from": "http://localhost:8080/def/ont/ga/igsn",
+            "to": "http://ldweb.ga.gov.au/def/ont/ga/igsn/igsn.html",
+            "headers": {}
+        }
+    ],
+        "/def/ont/ga/pdm":[
+        {
+            "label": "/def/ont/ga/pdm?_format=text/turtle",
+            "from": "http://localhost:8080/def/ont/ga/pdm?_format=text/turtle",
+            "to": "http://ldweb.ga.gov.au/def/ont/ga/pdm/pdm.ttl",
+            "headers": {}
+        },
+        {
+            "label": "/def/ont/ga/pdm.ttl",
+            "from": "http://localhost:8080/def/ont/ga/pdm.ttl",
+            "to": "http://ldweb.ga.gov.au/def/ont/ga/pdm/pdm.ttl",
+            "headers": {}
+        },
+        {
+            "label": "/def/ont/ga/pdm.owl",
+            "from": "http://localhost:8080/def/ont/ga/pdm.owl",
+            "to": "http://ldweb.ga.gov.au/def/ont/ga/pdm/pdm.ttl",
+            "headers": {}
+        },
+        {
+            "label": "/def/ont/ga/pdm*",
+            "from": "http://localhost:8080/def/ont/ga/pdm.test",
+            "to": "http://ldweb.ga.gov.au/def/ont/ga/pdm/pdm.html",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/(index.ttl){0,1}$":[
+        {
+            "label": "GA vocs Register",
+            "from": "http://localhost:8080/def/voc/ga/",
+            "to": "http://ldweb.ga.gov.au/def/voc/ga/",
+            "headers": {}
+        },
+        {
+            "label": "/def/voc/ga/*",
+            "from": "http://localhost:8080/def/voc/ga/?_format=text/turtle",
+            "to": "http://ldweb.ga.gov.au/def/voc/ga/index.ttl",
+            "headers": {}
+        },
+        {
+            "label": "/def/voc/ga/index.ttl",
+            "from": "http://localhost:8080/def/voc/ga/index.ttl",
+            "to": "http://ldweb.ga.gov.au/def/voc/ga/index.ttl",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/featureofinteresttype(.*)":[
+        {
+            "label": "GA voc Feature of Interest Type",
+            "from": "http://localhost:8080/def/voc/ga/featureofinteresttype.test",
+            "to": "http://vocabs.ga.gov.au/ga/sissvoc/feature-of-interest-type/resource?uri=/def/voc/ga/featureofinteresttype.test",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/analysis(.*)":[
+        {
+            "label": "GA voc Analysis",
+            "from": "http://localhost:8080/def/voc/ga/analysis.test",
+            "to": "http://vocabs.ga.gov.au/ga/sissvoc/ga-analysis/resource?uri=/def/voc/ga/analysis.test",
+            "headers": {}
+        }
+    ],
+        "/def/schema/ga/$":[
+        {
+            "label": "Def schema GA Register",
+            "from": "http://localhost:8080/def/schema/ga/",
+            "to": "http://ldweb.ga.gov.au/def/schema/ga/index.html",
+            "headers": {}
+        }
+    ],
+        "/(dataset|service)/$":[
+        {
+            "label": "GA Dataset/Service Register - OLD",
+            "from": "http://localhost:8080/dataset/?test",
+            "to": "http://pid.geoscience.gov.au/dataset/ga/$?test",
+            "headers": {}
+        }
+    ],
+        "/(dataset|service)/ga/$":[
+        {
+            "label": "GA Dataset/Service Register",
+            "from": "http://localhost:8080/dataset/ga/?test",
+            "to": "http://ldapi.ga.gov.au/ecat-ldapi/dataset/ga/$?test",
+            "headers": {}
+        }
+    ],
+        "/org/ga/index.html":[
+        {
+            "label": "GA org Register",
+            "from": "http://localhost:8080/org/ga/index.html",
+            "to": "http://52.62.134.119/org/ga/index.html",
+            "headers": {}
+        }
+    ],
+        "/org/ga/index.ttl":[
+        {
+            "label": "GA org Register",
+            "from": "http://localhost:8080/org/ga/index.ttl",
+            "to": "http://52.62.134.119/org/ga/index.ttl",
+            "headers": {}
+        }
+    ],
+        "/org/ga/(index.ttl|index.html)?$":[
+        {
+            "label": "GA org Register",
+            "from": "http://localhost:8080/org/ga/",
+            "to": "http://52.62.134.119/org/ga/index.html",
+            "headers": {}
+        }
+    ],
+        "/org/ga/* _format=text/turtle":[
+        {
+            "label": "GA org Register",
+            "from": "http://localhost:8080/org/ga/test?_format=text/turtle",
+            "to": "http://52.62.134.119/org/ga/index.ttl",
+            "headers": {"Accept":"text/turtle"}
+        }
+    ],
+        "/org/ga/*":[
+        {
+            "label": "GA org Register",
+            "from": "http://localhost:8080/org/ga/test",
+            "to": "http://52.62.134.119/org/ga/index.html",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/geology(.*)":[
+        {
+            "label": "GA voc Geology",
+            "from": "http://localhost:8080/def/voc/ga/geology/test",
+            "to": "http://vocabs.ga.gov.au/ga/sissvoc/geology/resource?uri=/def/voc/ga/geology/test",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/groundwaterdata(.*)":[
+        {
+            "label": "GA voc Groundwater Data Classification",
+            "from": "http://localhost:8080/def/voc/ga/groundwaterdata/test",
+            "to": "http://pid.geoscience.gov.au/def/voc/ga/",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/netcdfldtos(.*) %{HTTP:Accept} text/turtle":[
+        {
+            "label": "GA voc netCDF-LD ToS",
+            "from": "http://localhost:8080/def/voc/ga/netcdfldtos/test",
+            "to": "http://vocabs.ands.org.au/repository/api/lda/ga/ga-netcdf-ld-example-tos/1-0/resource.ttl?uri=/def/voc/ga/netcdfldtos/test",
+            "headers": {"Accept":"text/turtle"}
+        }
+    ],
+        "/def/voc/ga/netcdfldtos(.*)":[
+        {
+            "label": "GA voc netCDF-LD ToS",
+            "from": "http://localhost:8080/def/voc/ga/netcdfldtos/test",
+            "to": "http://vocabs.ga.gov.au/ga/sissvoc/netcdf-ld-example-surface-temperature/resource?uri=/def/voc/ga/netcdfldtos/test",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/uom(.*)":[
+        {
+            "label": "GA voc Units of Measure",
+            "from": "http://localhost:8080/def/voc/ga/uom/test",
+            "to": "http://vocabs.ga.gov.au/ga/sissvoc/uom/resource?uri=/def/voc/ga/uom/test",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/gadata(.*)":[
+        {
+            "label": "GA voc GA Data Classification",
+            "from": "http://localhost:8080/def/voc/ga/gadata",
+            "to": "http://vocabs.ands.org.au/repository/api/lda/ga/ga-data-classification/v1-0/resource?uri=/def/voc/ga/gadata",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/materialtype(.*)":[
+        {
+            "label": "GA voc Material Type",
+            "from": "http://localhost:8080/def/voc/ga/materialtype/test",
+            "to": "http://vocabs.ands.org.au/repository/api/lda/ga/material-type/v1-0/resource?uri=/def/voc/ga/materialtype/test",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/sampletype(.*)":[
+        {
+            "label": "GA voc Sample Type",
+            "from": "http://localhost:8080/def/voc/ga/sampletype/test",
+            "to": "http://vocabs.ands.org.au/repository/api/lda/ga/sample-type/v1-0/resource?uri=/def/voc/ga/sampletype/test",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/samplingmethod(.*)":[
+        {
+            "label": "GA voc Sampling Method",
+            "from": "http://localhost:8080/def/voc/ga/samplingmethod/test",
+            "to": "http://vocabs.ands.org.au/repository/api/lda/ga/sampling-method/v1-0/resource?uri=/def/voc/ga/samplingmethod/test",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/igsncode(.*)":[
+        {
+            "label": "GA voc IGSN Codelist",
+            "from": "http://localhost:8080/def/voc/ga/igsncode/test",
+            "to": "http://vocabs.ands.org.au/repository/api/lda/ga/igsn-codelist/v0-9-2/resource?uri=/def/voc/ga/igsncode/test",
+            "headers": {}
+        }
+    ],
+        "/ldwebsite(.*)":[
+        {
+            "label": "ldwebsite",
+            "from": "http://localhost:8080/ldwebsite/test",
+            "to": "http://ldweb.ga.gov.au/ldwebsite/test",
+            "headers": {}
+        }
+    ],
+        "/org/ga/geoscienceaustralia* %{QUERY_STRING} ^_format=text/turtle$":[
+        {
+            "label": "GA org GA",
+            "from": "http://localhost:8080/org/ga/geoscienceaustralia?_format=text/turtle",
+            "to": "http://ldweb.ga.gov.au/org/ga/geoscienceaustralia/index.ttl",
+            "headers": {}
+        }
+    ],
+
+          "/org/ga/geoscienceaustralia.ttl":[
+        {
+            "label": "GA org GA",
+            "from": "http://localhost:8080/org/ga/geoscienceaustralia.ttl",
+            "to": "http://ldweb.ga.gov.au/org/ga/geoscienceaustralia/index.ttl",
+            "headers": {}
+        }
+    ],
+        "/org/ga/geoscienceaustralia.html":[
+        {
+            "label": "GA org GA",
+            "from": "http://localhost:8080/org/ga/geoscienceaustralia.html",
+            "to": "http://ldweb.ga.gov.au/org/ga/geoscienceaustralia/index.html",
+            "headers": {}
+        }
+    ],
+        "/org/ga/geoscienceaustralia(.ttl|.html)?$":[
+        {
+            "label": "GA org GA",
+            "from": "http://localhost:8080/org/ga/geoscienceaustralia",
+            "to": "http://ldweb.ga.gov.au/org/ga/geoscienceaustralia/index.html",
+            "headers": {}
+        }
+    ],
+        "/def/voc/netCDF-LD-st-demo":[
+        {
+            "label": "Vocab netCDF-LD-SKOS legacy link",
+            "from": "http://localhost:8080/def/voc/netCDF-LD-st-demo",
+            "to": "http://pid.geoscience.gov.au/def/voc/ga/netcdfldtos",
+            "headers": {}
+        }
+    ],
+        "/feature/ga/(er|erl)/(commodity|commodityresourceview|mine|mineview|mineraloccurrence|mineraloccurrenceview)/([0-9]+)/?([a-z0-9]+)?/?([a-z]+)? $2 commodity":[
+        {
+            "label": "GA earthresourceml Feature Services",
+            "from": "http://localhost:8080/feature/ga/er/commodity/1/a/b",
+            "to": "http://services.ga.gov.au/earthresource/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=er:Commodity&amp;featureId=ga.er.commodity.1.a",
+            "headers": {}
+        }
+    ],
+        "/feature/ga/(er|erl)/(commodity|commodityresourceview|mine|mineview|mineraloccurrence|mineraloccurrenceview)/([0-9]+)/?([a-z0-9]+)?/?([a-z]+)? $2 commodityresourceview":[
+        {
+            "label": "GA earthresourceml Feature Services",
+            "from": "http://localhost:8080/feature/ga/er/commodityresourceview/1/a/b",
+            "to": "http://services.ga.gov.au/earthresource/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=erl:CommodityResourceView&amp;featureId=ga.erl.commodityresourceview.1.a",
+            "headers": {}
+        }
+    ],
+        "/feature/ga/(er|erl)/(commodity|commodityresourceview|mine|mineview|mineraloccurrence|mineraloccurrenceview)/([0-9]+)/?([a-z0-9]+)?/?([a-z]+)? $2 mine":[
+        {
+            "label": "GA earthresourceml Feature Services",
+            "from": "http://localhost:8080/feature/ga/er/mine/1/a/b",
+            "to": "http://services.ga.gov.au/earthresource/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=er:Mine&amp;featureId=ga.er.mine.1",
+            "headers": {}
+        }
+    ],
+        "/feature/ga/(er|erl)/(commodity|commodityresourceview|mine|mineview|mineraloccurrence|mineraloccurrenceview)/([0-9]+)/?([a-z0-9]+)?/?([a-z]+)? $2 mineview":[
+        {
+            "label": "GA earthresourceml Feature Services",
+            "from": "http://localhost:8080/feature/ga/er/mineview/1/a/b",
+            "to": "http://services.ga.gov.au/earthresource/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=erl:MineView&amp;featureId=ga.erl.mineview.1",
+            "headers": {}
+        }
+    ],
+        "/feature/ga/(er|erl)/(commodity|commodityresourceview|mine|mineview|mineraloccurrence|mineraloccurrenceview)/([0-9]+)/?([a-z0-9]+)?/?([a-z]+)? $2 mineraloccurrence":[
+        {
+            "label": "GA earthresourceml Feature Services",
+            "from": "http://localhost:8080/feature/ga/er/mineraloccurrence/1/a/b",
+            "to": "http://services.ga.gov.au/earthresource/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=er:MineralOccurrence&amp;featureId=ga.er.mineraloccurrence.1",
+            "headers": {}
+        }
+    ],
+        "/feature/ga/(er|erl)/(commodity|commodityresourceview|mine|mineview|mineraloccurrence|mineraloccurrenceview)/([0-9]+)/?([a-z0-9]+)?/?([a-z]+)? $2 mineraloccurrenceview":[
+        {
+            "label": "GA earthresourceml Feature Services",
+            "from": "http://localhost:8080/feature/ga/er/mineraloccurrenceview/1/a/b",
+            "to": "http://services.ga.gov.au/earthresource/wfs?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=erl:MineralOccurrenceView&amp;featureId=ga.erl.mineraloccurrenceview.1",
+            "headers": {}
+        }
+    ],
+        "/def/schema/ga/ISO19115-1-2014(.*)$":[
+        {
+            "label": "Def schema GA ISO Profile HTML",
+            "from": "http://localhost:8080/def/schema/ga/ISO19115-1-2014/test",
+            "to": "http://ldweb.ga.gov.au/def/schema/ga/ISO19115-1-2014/test",
+            "headers": {}
+        }
+    ],
+        "/def/schema/ga/ISO19115-3-2016(.*)$":[
+        {
+            "label": "Def schema GA ISO Profile XML",
+            "from": "http://localhost:8080/def/schema/ga/ISO19115-3-2016/test",
+            "to": "http://ldweb.ga.gov.au/def/schema/ga/ISO19115-3-2016/test",
+            "headers": {}
+        }
+    ],
+        "/dataset/([0-9]+)/distribution/([a-z]+)":[
+        {
+            "label": "eCat CloudFront distributions",
+            "from": "http://localhost:8080/dataset/123/distribution/abc",
+            "to": "https://d28rz98at9flks.cloudfront.net/123/123.abc",
+            "headers": {}
+        }
+    ],
+        "feature/ga/geologicprovince/([0-9]+)":[
+        {
+            "label": "Geologic provinces",
+            "from": "http://localhost:8080/feature/ga/geologicprovince/1",
+            "to": "https://asud.ga.gov.au/search-stratigraphic-units/geological-province/1",
+            "headers": {}
+        }
+    ],
+        "/test":[
+        {
+            "label": "test",
+            "from": "http://localhost:8080/test",
+            "to": "http://example.com/test/",
+            "headers": {}
+        }
+    ],
+        "/(dataset|service)/ga/([0-9]{1,7}) %{QUERY_STRING} _view=(alternates|metatag|agls|agrif|agrkms|apa|dataset|dcat|dct|ISO19115-2014|schemaorg)":[
+        {
+            "label": "GA Dataset/Service Instance1",
+            "from": "http://localhost:8080/dataset/ga/13579?_view=alternates",
+            "to": "http://13.211.29.61/ecat-ldapi/dataset/ga/13579$?_view=alternates",
+            "headers": {}
+        }
+    ],
+        "/(dataset|service)/ga/([0-9]{1,7}) _format=(text/xml|application/xml) _view=ISO19115":[
+        {
+            "label": "GA Dataset/Service Instance2",
+            "from": "http://localhost:8080/dataset/ga/13579?_format=text/xml_view=ISO19115",
+            "to": "https://ecat.ga.gov.au/geonetwork/srv/eng/csw?service=CSW&amp;request=GetRecords&amp;version=2.0.2&amp;outputSchema=own&amp;constraintLanguage=CQL_TEXT&amp;constraint_language_version=1.1.0&amp;typeNames=csw:Record&amp;elementSetName=full&amp;resultType=results&amp;constraint=AlternateIdentifier+EQ+13579",
+            "headers": {}
+        }
+    ],
+        "/(dataset|service)/ga/([0-9]{1,7}) %{HTTP:Accept} text/turtle":[
+        {
+            "label": "GA Dataset/Service Instance3",
+            "from": "http://localhost:8080/dataset/ga/13579",
+            "to": "http://ldapi.ga.gov.au/ecat-ldapi/dataset/ga/13579?_view=dct&amp;_format=text/turtle",
+            "headers": {"Accept":"text/turtle"}
+        }
+    ],
+        "/(dataset|service)/ga/([0-9]{1,7})":[
+        {
+            "label": "GA Dataset/Service Instance4",
+            "from": "http://localhost:8080/dataset/ga/13579",
+            "to": "https://ecat.ga.gov.au/geonetwork/srv/eng/catalog.search#/metadata/13579",
+            "headers": {}
+        }
+    ],
+        "/about/$":[
+        {
+            "label": "sss About page",
+            "from": "http://localhost:8080/about/",
+            "to": "http://ec2-13-237-201-185.ap-southeast-2.compute.amazonaws.com/about/",
+            "headers": {}
+        }
+    ],
+        "/site/ga/(.*)$ ^_view=(.*) _format=application/rdfxml":[
+        {
+            "label": "Sites LD API 1",
+            "from": "http://localhost:8080/site/ga/test?_view=123_format=application/rdfxml",
+            "to": "http://ec2-13-237-201-185.ap-southeast-2.compute.amazonaws.com/site/ga/test?_view_123&amp;_format=application/rdf+xml",
+            "headers": {}
+        }
+    ],
+        "/site/ga/(.*)$ ^_view=(.*) _format=application/ldjson":[
+        {
+            "label": "Sites LD API 2",
+            "from": "http://localhost:8080/site/ga/test?_view=123_format=application/ldjson",
+            "to": "http://ec2-13-237-201-185.ap-southeast-2.compute.amazonaws.com/site/ga/test?_view_123&amp;_format=application/ld+json",
+            "headers": {}
+        }
+    ],
+        "/site/ga/(.*)$":[
+        {
+            "label": "Sites LD API 3",
+            "from": "http://localhost:8080/site/ga/test?123",
+            "to": "http://ec2-13-237-201-185.ap-southeast-2.compute.amazonaws.com/site/ga/test?123",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/PlaceType(.*)":[
+        {
+            "label": "laceType ICSM voc",
+            "from": "http://localhost:8080/def/voc/ga/PlaceType/test",
+            "to": "http://vocabs.ands.org.au/repository/api/lda/ga/place-type/v1-0/resource?uri=/def/voc/ga/PlaceType/test",
+            "headers": {}
+        }
+    ],
+        "/NOTsample/(.*)$ ^_view=(.*) ^_format=application/rdfxml":[
+        {
+            "label": "Samples LD API 1",
+            "from": "http://localhost:8080/NOTsample/test?_view=123_format=application/rdfxml",
+            "to": "http://ec2-13-237-201-185.ap-southeast-2.compute.amazonaws.com/sample/test?_view_123&amp;_format=application/rdf+xml",
+            "headers": {}
+        }
+    ],
+        "/NOTsample/(.*)$ ^_view=(.*) ^_format=application/ldjson":[
+        {
+            "label": "Samples LD API 2",
+            "from": "http://localhost:8080/NOTsample/test?_view=123_format=application/ldjson",
+            "to": "http://ec2-13-237-201-185.ap-southeast-2.compute.amazonaws.com/sample/test?_view_123&amp;_format=application/ld+json",
+            "headers": {}
+        }
+    ],
+
+        "/NOTsample/(.*)$":[
+        {
+            "label": "Samples LD API 3",
+            "from": "http://localhost:8080/NOTsample/test?123",
+            "to": "http://10.0.52.21/sample/test?123",
+            "headers": {}
+        }
+    ],
+        "/geologicFeature/au/SU(.+)$ ^_view=geosciml$ ^_format=application/rdfxml":[
+        {
+            "label": "Stratigraphic Units 1",
+            "from": "http://localhost:8080/geologicFeature/au/SU123?_view=geosciml_format=application/rdfxml",
+            "to": "https://stratunits.gs.cloud.ga.gov.au/gsmlb/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=gsmlb:GeologicUnit&amp;outputFormat=gml32&amp;featureId=asud.gsml.geologicunit.123",
+            "headers": {}
+        }
+    ],
+        "/geologicFeature/au/SU(.+)$ _view=geosciml-lite _format=application/rdfxml":[
+        {
+            "label": "Stratigraphic Units 2",
+            "from": "http://localhost:8080/geologicFeature/au/SU123?_view=geosciml-lite_format=application/rdfxml",
+            "to": "https://stratunits.gs.cloud.ga.gov.au/gsmlp/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=gsmlp:GeologicUnitView&amp;outputFormat=gml32&amp;featureId=ga.gsmlp.geologicunitview.123",
+            "headers": {}
+        }
+    ],
+        "/geologicFeature/au/SU(.+)$ _view=simple _format=application/rdfxml":[
+        {
+            "label": "Stratigraphic Units 3",
+            "from": "http://localhost:8080/geologicFeature/au/SU123?_view=simple_format=application/rdfxml",
+            "to": "https://stratunits.gs.cloud.ga.gov.au/stratunit/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=stratunit:StratigraphicUnit&amp;outputFormat=gml32&amp;featureId=StratigraphicUnit.123",
+            "headers": {}
+        }
+    ],
+
+        "/geologicFeature/au/SU(.+)$":[
+        {
+            "label": "Stratigraphic Units 4",
+            "from": "http://localhost:8080/geologicFeature/au/SU123",
+            "to": "https://asud.ga.gov.au/search-stratigraphic-units/results/123",
+            "headers": {}
+        }
+    ],
+        "/sample/(.*)$":[
+        {
+            "label": "Samples LD API",
+            "from": "http://localhost:8080/sample/123?test",
+            "to": "http://13.237.201.185/sample/123?test",
+            "headers": {}
+        }
+    ],
+        "/samplingFeature/au/FS(.+)$":[
+        {
+            "label": "Field Sites",
+            "from": "http://localhost:8080/samplingFeature/au/FS123",
+            "to": "https://services.ga.gov.au/gis/field-geology/wfs?request=GetFeature&amp;version=1.1.0&amp;service=wfs&amp;typenames=fieldsite:Lithostratigraphy&amp;CQL_FILTER=fieldsite_identifier%20EQ%20%27http://pid.geoscience.gov.au/samplingFeature/au/FS123%27",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/associationtype(.*)":[
+        {
+            "label": "GA voc Association Type",
+            "from": "http://localhost:8080/def/voc/ga/associationtype123",
+            "to": "http://vocabs.ga.gov.au/object?uri=/def/voc/ga/associationtype123",
+            "headers": {}
+        }
+    ],
+        "/samplingFeature/au/BH(.+)$":[
+        {
+            "label": "Boreholes",
+            "from": "http://localhost:8080/samplingFeature/au/BH123",
+            "to": "https://services.ga.gov.au/gis/boreholes/gsmlbh/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeName=gsmlbh:Borehole&amp;featureid=ga.borehole.123",
+            "headers": {}
+        }
+    ],
+        "def/voc/ga/onlinefunction(.*)":[
+        {
+            "label": "GA voc Online Function Type",
+            "from": "http://localhost:8080/def/voc/ga/onlinefunction123",
+            "to": "http://vocabs.ga.gov.au/object?uri=/def/voc/ga/onlinefunction123",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/protocoltype(.*)":[
+        {
+            "label": "GA voc ISO19115-1 Protocol Type",
+            "from": "http://localhost:8080/def/voc/ga/protocoltype123",
+            "to": "http://vocabs.ga.gov.au/object?uri=/def/voc/ga/protocoltype123",
+            "headers": {}
+        }
+    ],
+        "/def/voc/ga/servicetype(.*)":[
+        {
+            "label": "GA voc ISO19115-1 Service Type",
+            "from": "http://localhost:8080/def/voc/ga/servicetype123",
+            "to": "http://vocabs.ga.gov.au/object?uri=/def/voc/ga/servicetype123",
+            "headers": {}
+        }
+    ]
+}
