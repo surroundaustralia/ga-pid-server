@@ -1,9 +1,0 @@
-# pull request from feature/* - run tests
-  # docker build test image
-  # docker exec python script
-
-# push to main - deploy changes
-  # docker build prod image
-  # docker push to ECR?
-  # kubectl apply
-  # kubectl rollout restart

@@ -1,0 +1,20 @@
+name: Run Tests
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Build Docker image
+        run: docker build -t ga/pid-server-test:latest -f Dockerfile.test .
+      - name: Run Docker image
+        run: docker run --name pid-test -d ga/pid-server-test:latest
+      - name: Run pytest in container
+        run: docker exec pid-test python3 -m pytest -v test_pid_rules.py
+      - name: Remove Docker container
+        run: docker rm pid-test -f

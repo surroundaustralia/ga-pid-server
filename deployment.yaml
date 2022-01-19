@@ -15,7 +15,7 @@ spec:
         app: ga-pid-server
     spec:
       containers:
-        - image: 680471986828.dkr.ecr.ap-southeast-2.amazonaws.com/ga/pid-server:latest
+        - image: #{ECR_REGISTRY}#/ga/pid-server:latest
           imagePullPolicy: Always
           name: ga-pid-server
           ports:
@@ -66,10 +66,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - geopid.surroundaustralia.com
+        - gapid.surroundaustralia.com
       secretName: ga-pid-server-cert
   rules:
-    - host: geopid.surroundaustralia.com
+    - host: gapid.surroundaustralia.com
       http:
         paths:
           - backend:
