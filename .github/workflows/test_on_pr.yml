@@ -15,6 +15,6 @@ jobs:
       - name: Run Docker image
         run: docker run --name pid-test -d ga/pid-server-test:latest
       - name: Run pytest in container
-        run: docker exec pid-test python3 -m pytest -v test_pid_rules.py
+        run: docker exec pid-test python3 -m pytest -v tests/test_PID.py
       - name: Remove Docker container
         run: docker rm pid-test -f
