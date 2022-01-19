@@ -7,5 +7,5 @@ COPY ./conf/sites/gapid.surroundaustralia.com.conf /usr/local/apache2/conf/sites
 RUN apt update
 RUN apt install python3 python3-pip -y
 WORKDIR /app
-COPY requirements.txt test_pid_rules.py ./
+COPY requirements.txt test_pid_rules.py tests ./
 RUN pip3 install -r requirements.txt
