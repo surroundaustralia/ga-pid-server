@@ -1,6 +1,7 @@
 name: Run Tests
 on:
-  pull_request:
+  [pull_request,shedule]:
+    -cron: "0 5 * * *"
     branches:
       - main
   workflow_dispatch:
