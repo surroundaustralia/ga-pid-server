@@ -3,6 +3,7 @@ COPY ./htdocs/ /usr/local/apache2/htdocs/
 COPY ./conf/httpd.conf /usr/local/apache2/conf/httpd.conf
 RUN mkdir -p /usr/local/apache2/conf/sites/
 COPY ./conf/sites/gapid.surroundaustralia.com.conf /usr/local/apache2/conf/sites/gapid.surroundaustralia.com.conf
+COPY ./conf/sites/gapid.surroundaustralia.com.conf /usr/local/apache2/conf/sites/gapid.surroundaustralia.com.conf
 RUN mkdir -p /usr/local/PID_tests
 COPY tests/test_PID.py /usr/local/PID_tests/test_PID.py
 COPY tests/PIDupgrade.data.json /usr/local/PID_tests/PIDupgrade.data.json
