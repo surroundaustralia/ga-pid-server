@@ -3,9 +3,12 @@ COPY ./htdocs/ /usr/local/apache2/htdocs/
 COPY ./conf/httpd.conf /usr/local/apache2/conf/httpd.conf
 RUN mkdir -p /usr/local/apache2/conf/sites/
 COPY ./conf/sites/gapid.surroundaustralia.com.conf /usr/local/apache2/conf/sites/gapid.surroundaustralia.com.conf
+RUN mkdir -p /usr/local/PID_tests
+COPY tests/test_PID.py /usr/local/PID_tests/test_PID.py
+COPY tests/PIDupgrade.data.json /usr/local/PID_tests/PIDupgrade.data.json
 
 RUN apt update
 RUN apt install python3 python3-pip -y
 WORKDIR /app
-COPY requirements.txt test_pid_rules.py ./
+COPY requirements.txt ./
 RUN pip3 install -r requirements.txt

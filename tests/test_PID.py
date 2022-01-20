@@ -17,7 +17,7 @@ def create_cases(json_file):
     return test_cases
 
 
-@pytest.mark.parametrize("test_input,expected,label,headers", create_cases("./tests/PIDupgrade.data.json"))
+@pytest.mark.parametrize("test_input,expected,label,headers", create_cases("/usr/local/PID_tests/PIDupgrade.data.json"))
 def test_PID(test_input, expected, label, headers):
     assert redirect(label=label, from_=test_input, headers=headers) == expected
 
