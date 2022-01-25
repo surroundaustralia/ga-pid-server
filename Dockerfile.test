@@ -2,10 +2,10 @@ FROM httpd:2.4
 COPY ./htdocs/ /usr/local/apache2/htdocs/
 COPY ./conf/httpd.conf /usr/local/apache2/conf/httpd.conf
 RUN mkdir -p /usr/local/apache2/conf/sites/
-COPY ./conf/sites/gapid.surroundaustralia.com.conf /usr/local/apache2/conf/sites/gapid.surroundaustralia.com.conf
-RUN mkdir -p /usr/local/PID_tests
-COPY tests/test_PID.py /usr/local/PID_tests/test_PID.py
-COPY tests/PIDupgrade.data.json /usr/local/PID_tests/PIDupgrade.data.json
+COPY ./conf/sites/ /usr/local/apache2/conf/sites/
+RUN mkdir -p /usr/local/pid_tests
+COPY tests/test_redirects.py /usr/local/PID_tests/test_redirects.py
+COPY tests/rules-cases.json /usr/local/pid_tests/rules-cases.json
 
 RUN apt update
 RUN apt install python3 python3-pip -y

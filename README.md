@@ -49,7 +49,7 @@ You can use the Dockerfile with Docker Desktop to create a Docker container loca
 You can set the `host` variable in the two testing files to test not locally (http://localhost) but remotely, e.g. http://pid.geoscience.gov.au.
 
 ### GitHub Actions
-An Apache server loaded with this repository's static content and redirect rules can be deployed with GitHub Actions using the `deployment.yaml` file. One Action is used to validate new rules, the other reloads the server online:
+An Apache server loaded with this repository's static content and redirect rules can be deployed with GitHub Actions using the files in [.github/worklflows](.github/worklflows). One Action is used to validate new rules, the other reloads the server online:
 
 1. On pull request to the `main` branch:
     - Run a test Docker image to run `pytest` tests
