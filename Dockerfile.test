@@ -5,7 +5,7 @@ RUN mkdir -p /usr/local/apache2/conf/sites/
 COPY ./conf/sites/ /usr/local/apache2/conf/sites/
 RUN mkdir -p /usr/local/pid_tests
 COPY tests/test_redirects.py /usr/local/PID_tests/test_redirects.py
-COPY tests/rule-cases.json /usr/local/pid_tests/rule-cases.json
+COPY tests/rule-cases.json /usr/local/PID_tests/rule-cases.json
 
 RUN apt update
 RUN apt install python3 python3-pip -y
