@@ -17,6 +17,6 @@ def create_cases(json_file, host="http://pid.geoscience.gov.au"):
     return test_cases
 
 
-@pytest.mark.parametrize("test_input,expected,label,headers", create_cases("rule-cases.json"))
+@pytest.mark.parametrize("test_input,expected,label,headers", create_cases("/usr/local/PID_tests/rule-cases.json"))
 def test_pid(test_input, expected, label, headers):
     assert redirect(label=label, from_=test_input, headers=headers) == expected, label
