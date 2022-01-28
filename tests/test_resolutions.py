@@ -8,7 +8,7 @@ def redirect(label, from_, headers=None):
     return r.status_code
 
 
-def create_cases(json_file, host="http://localhost"):
+def create_cases(json_file, host="http://localhost:80"):
     test_cases = []
     uris = json.load(open(json_file, "r"))
     for uri, cases in uris.items():
@@ -19,4 +19,9 @@ def create_cases(json_file, host="http://localhost"):
 
 @pytest.mark.parametrize("test_input,expected,label,headers", create_cases("rule-cases.json"))
 def test_pid(test_input, expected, label, headers):
+    assert redirect(label=label, from_=test_input, headers=headers) == 200
+
+
+@pytest.mark.parametrize("test_input,expected,label,headers", create_cases("extra-rule-cases.json"))
+def test_extra_pid(test_input, expected, label, headers):
     assert redirect(label=label, from_=test_input, headers=headers) == 200

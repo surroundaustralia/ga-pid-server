@@ -1,0 +1,74 @@
+{
+  "/samplingfeature/au/GS(.*)": [
+    {
+        "label": "Sampling Features: Gravity Station",
+        "from" : "{HOST}/samplingfeature/au/GS123",
+        "to" : "<<PyLDAPI_Domain>>/samplingfeature/au/GS123",
+        "headers": {}
+    }
+
+  ],
+    "/samplingfeature/au/BH(.*)": [
+    {
+        "label": "Sampling Features: Borehole",
+        "from" : "{HOST}/samplingfeature/au/BH123",
+        "to" : "<<PyLDAPI_Domain>>/samplingfeature/au/BH123",
+        "headers": {}
+    }
+
+  ],
+    "/samplingFeature/au/MS(.*)": [
+    {
+        "label": "Sampling Features: Section",
+        "from" : "{HOST}/samplingFeature/au/MS123",
+        "to" : "<<PyLDAPI_Domain>>/samplingFeature/au/MS123",
+        "headers": {}
+    }
+
+  ],
+    "/samplingfeature/au/FS(.*)": [
+    {
+        "label": "Sampling Features: Field Site",
+        "from" : "{HOST}/samplingfeature/au/FS123",
+        "to" : "<<PyLDAPI_Domain>>/samplingfeature/au/FS$1",
+        "headers": {}
+    }
+
+  ],
+    "/samplingFeature/au/BI(.*)": [
+    {
+        "label": "Sampling Features: Borehole Interval",
+        "from" : "{HOST}/samplingFeature/au/BI123",
+        "to" : "<<PyLDAPI_Domain>>/samplingFeature/au/BI123",
+        "headers": {}
+    }
+
+  ],
+    "/survey/au/SV(.*)": [
+    {
+        "label": "Surveys",
+        "from" : "{HOST}/survey/au/SV123",
+        "to" : "<<PyLDAPI_Domain>>/survey/au/SV123",
+        "headers": {}
+    }
+
+  ],
+    "/sample/AU(.*)": [
+    {
+        "label": "Samples",
+        "from" : "{HOST}/sample/AU123",
+        "to" : "<<PyLDAPI_Domain>>/sample/AU123",
+        "headers": {}
+    }
+
+  ],
+    "/geologicFeature/au/MO(.*)": [
+    {
+        "label": "Geological Features",
+        "from" : "{HOST}/geologicFeature/au/MO123",
+        "to" : "<<PyLDAPI_Domain>>/geologicalFeature/au/MO123",
+        "headers": {}
+    }
+
+  ]
+}
