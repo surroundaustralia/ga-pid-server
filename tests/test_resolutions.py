@@ -1,10 +1,10 @@
 import json
 import pytest
-import httpx
+import requests
 
 
 def redirect(label, from_, headers=None):
-    r = httpx.get(from_, headers=headers, follow_redirects=True, timeout=2)
+    r = requests.get(from_, headers=headers, allow_redirects=True, timeout=2)
     return r.status_code
 
 
