@@ -9,7 +9,7 @@ def redirect(label, from_, headers=None):
     return r.headers.get("location")
 
 
-def create_cases(json_file, host="http://pid.geoscience.gov.au"):
+def create_cases(json_file, host="http://localhost:80"):
     test_cases = []
     uris = json.load(open(json_file, "r"))
     for uri, cases in uris.items():
