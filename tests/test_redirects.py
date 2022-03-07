@@ -13,6 +13,9 @@ def create_cases(json_file, host="http://pid.geoscience.gov.au"):
     uris = json.load(open(json_file, "r"))
     for uri, cases in uris.items():
         for case in cases:
+            # skip testing proxy's as they don't redirect
+            if case["from"] == case["to"]:
+                continue
             test_cases.append((case["from"].replace("{HOST}", host), case["to"], case["label"], case["headers"]))
     return test_cases
 

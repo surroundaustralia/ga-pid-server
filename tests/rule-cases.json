@@ -511,7 +511,7 @@
         {
             "label": "sss About page",
             "from": "{HOST}/about/",
-            "to": "http://ec2-13-237-201-185.ap-southeast-2.compute.amazonaws.com/about/",
+            "to": "{HOST}/about/",
             "headers": {}
         }
     ],
@@ -519,7 +519,7 @@
         {
             "label": "Sites LD API 1",
             "from": "{HOST}/site/ga/test?_view=123_format=application/rdfxml",
-            "to": "http://ec2-13-237-201-185.ap-southeast-2.compute.amazonaws.com/site/ga/test?_view_123&amp;_format=application/rdf+xml",
+            "to": "{HOST}/site/ga/test?_view=123_format=application/rdfxml",
             "headers": {}
         }
     ],
@@ -527,7 +527,7 @@
         {
             "label": "Sites LD API 2",
             "from": "{HOST}/site/ga/test?_view=123_format=application/ldjson",
-            "to": "http://ec2-13-237-201-185.ap-southeast-2.compute.amazonaws.com/site/ga/test?_view_123&amp;_format=application/ld+json",
+            "to": "{HOST}/site/ga/test?_view=123_format=application/ldjson",
             "headers": {}
         }
     ],
@@ -535,7 +535,7 @@
         {
             "label": "Sites LD API 3",
             "from": "{HOST}/site/ga/test?123",
-            "to": "http://ec2-13-237-201-185.ap-southeast-2.compute.amazonaws.com/site/ga/test?123",
+            "to": "{HOST}/site/ga/test?123",
             "headers": {}
         }
     ],
@@ -551,7 +551,7 @@
         {
             "label": "Samples LD API 1",
             "from": "{HOST}/NOTsample/test?_view=123_format=application/rdfxml",
-            "to": "http://ec2-13-237-201-185.ap-southeast-2.compute.amazonaws.com/sample/test?_view_123&amp;_format=application/rdf+xml",
+            "to": "{HOST}/NOTsample/test?_view=123_format=application/rdfxml",
             "headers": {}
         }
     ],
@@ -559,7 +559,7 @@
         {
             "label": "Samples LD API 2",
             "from": "{HOST}/NOTsample/test?_view=123_format=application/ldjson",
-            "to": "http://ec2-13-237-201-185.ap-southeast-2.compute.amazonaws.com/sample/test?_view_123&amp;_format=application/ld+json",
+            "to": "{HOST}/NOTsample/test?_view=123_format=application/ldjson",
             "headers": {}
         }
     ],
@@ -567,7 +567,7 @@
         {
             "label": "Samples LD API 3",
             "from": "{HOST}/NOTsample/test?123",
-            "to": "http://10.0.52.21/sample/test?123",
+            "to": "{HOST}/NOTsample/test?123",
             "headers": {}
         }
     ],

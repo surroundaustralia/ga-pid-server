@@ -12,3 +12,4 @@ RUN apt install python3 python3-pip -y
 WORKDIR /app
 COPY requirements.txt ./
 RUN pip3 install -r requirements.txt
+WORKDIR /usr/local/PID_tests/
